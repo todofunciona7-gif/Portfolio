@@ -32,6 +32,7 @@ export default {
         float: 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         ripple: 'ripple 1.5s ease infinite',
+        shake: 'shake 0.5s ease-in-out',
       },
       keyframes: {
         marquee: {
@@ -45,6 +46,13 @@ export default {
         ripple: {
           '0%, 60%, 100%': { backgroundColor: 'transparent' },
           '30%': { backgroundColor: '#F4C430' },
+        },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0) rotate(0)' },
+          '20%': { transform: 'translateX(-4px) rotate(-6deg)' },
+          '40%': { transform: 'translateX(4px) rotate(6deg)' },
+          '60%': { transform: 'translateX(-4px) rotate(-6deg)' },
+          '80%': { transform: 'translateX(4px) rotate(6deg)' },
         },
       },
       backgroundImage: {
