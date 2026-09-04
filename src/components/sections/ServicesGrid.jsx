@@ -1,6 +1,9 @@
-import { motion } from 'framer-motion'
+import { Share2, PenTool, Palette, CalendarDays, Camera } from 'lucide-react'
 import ScrollReveal from '../ui/ScrollReveal'
 import { services } from '../../data/content'
+
+const serviceIcons = [Share2, PenTool, Palette, CalendarDays, Camera]
+const spans = ['md:col-span-3', 'md:col-span-3', 'md:col-span-2', 'md:col-span-2', 'md:col-span-2']
 
 export default function ServicesGrid() {
   return (
@@ -13,24 +16,24 @@ export default function ServicesGrid() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 divide-y divide-white/10 md:divide-y-0 md:divide-x">
-          {services.map((svc, i) => (
-            <motion.div
-              key={svc.n}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: i * 0.06 }}
-              className="p-10 md:p-8 group hover:bg-white/[0.03] transition-colors duration-500"
-              data-cursor="hover"
-            >
-              <div className="font-display text-[42px] text-yellow mb-5 leading-none group-hover:scale-110 origin-left transition-transform duration-300">
-                {svc.n}
-              </div>
-              <div className="text-[17px] font-semibold mb-2.5 text-cream">{svc.title}</div>
-              <div className="text-sm leading-[1.6] text-muted-dark">{svc.desc}</div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+          {services.map((svc, i) => {
+            const Icon = serviceIcons[i]
+            return (
+              <ScrollReveal
+                key={svc.n}
+                delay={i * 0.06}
+                className={`col-span-1 ${spans[i]} group relative rounded-lg border border-white/10 bg-ink-soft p-8 transition-all duration-300 hover:border-yellow/50 hover:shadow-lg`}
+              >
+                <span className="absolute top-6 right-7 font-display text-lg text-muted-dark/50">{svc.n}</span>
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-ink text-yellow transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
+                  <Icon size={22} strokeWidth={1.75} />
+                </div>
+                <div className="text-[17px] font-semibold mb-2.5 text-cream">{svc.title}</div>
+                <div className="text-sm leading-[1.6] text-muted-dark">{svc.desc}</div>
+              </ScrollReveal>
+            )
+          })}
         </div>
       </div>
     </section>
