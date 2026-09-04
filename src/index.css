@@ -8,12 +8,12 @@
   }
 
   body {
-    @apply bg-cream text-ink font-body;
+    @apply bg-ink text-cream font-body;
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    @apply bg-ink text-yellow;
+    @apply bg-yellow text-ink;
   }
 
   @media (pointer: fine) {
@@ -23,7 +23,7 @@
   }
 
   ::-webkit-scrollbar { width: 8px; }
-  ::-webkit-scrollbar-track { @apply bg-cream-alt; }
+  ::-webkit-scrollbar-track { @apply bg-ink-2; }
   ::-webkit-scrollbar-thumb { @apply bg-yellow rounded-full; }
 }
 

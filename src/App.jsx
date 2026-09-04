@@ -1,5 +1,6 @@
 import { MotionConfig } from 'framer-motion'
 import CustomCursor from './components/ui/CustomCursor'
+import CursorGlow from './components/ui/CursorGlow'
 import ScrollProgressBar from './components/ui/ScrollProgressBar'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -16,8 +17,9 @@ import CTASection from './components/sections/CTASection'
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="relative bg-cream font-body text-ink overflow-x-hidden">
+      <div className="relative bg-ink font-body text-cream overflow-x-hidden">
         <CustomCursor />
+        <CursorGlow />
         <ScrollProgressBar />
         <Navbar />
 

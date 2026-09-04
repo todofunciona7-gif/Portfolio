@@ -4,7 +4,7 @@ import { stats } from '../../data/content'
 
 export default function StatsSection() {
   return (
-    <section className="bg-ink py-16">
+    <section className="bg-ink border-t border-white/10 py-16">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
         {stats.map((stat, i) => (
           <ScrollReveal key={stat.label} delay={i * 0.1}>

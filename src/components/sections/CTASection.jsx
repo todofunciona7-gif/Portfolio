@@ -13,12 +13,12 @@ function LinkedinIcon(props) {
 
 export default function CTASection() {
   return (
-    <section id="contacto" className="max-w-[1240px] mx-auto px-6 md:px-12 pt-24 md:pt-28 pb-28 md:pb-32 text-center">
+    <section id="contacto" className="bg-ink max-w-[1240px] mx-auto px-6 md:px-12 pt-24 md:pt-28 pb-28 md:pb-32 text-center">
       <ScrollReveal>
-        <h2 className="font-display font-normal text-[clamp(36px,5vw,54px)] mb-6 max-w-[720px] mx-auto">
+        <h2 className="font-display font-normal text-[clamp(36px,5vw,54px)] mb-6 max-w-[720px] mx-auto text-cream">
           Hablemos de tu próxima estrategia de contenido.
         </h2>
-        <p className="text-base text-muted max-w-[480px] mx-auto mb-10">
+        <p className="text-base text-muted-dark max-w-[480px] mx-auto mb-10">
           Contame de tu marca y en 24hs te respondo con los próximos pasos.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
@@ -34,13 +34,13 @@ export default function CTASection() {
             href={contact.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 border border-ink text-ink px-8 py-4 rounded-[2px] text-[15px] font-semibold"
+            className="inline-flex items-center gap-2 border border-white/20 text-cream px-8 py-4 rounded-[2px] text-[15px] font-semibold hover:border-white/40 hover:bg-white/5 transition-colors"
           >
             <LinkedinIcon /> LinkedIn
           </MagneticButton>
           <MagneticButton
             href={`mailto:${contact.email}`}
-            className="inline-flex items-center gap-2 border border-ink text-ink px-8 py-4 rounded-[2px] text-[15px] font-semibold"
+            className="inline-flex items-center gap-2 border border-white/20 text-cream px-8 py-4 rounded-[2px] text-[15px] font-semibold hover:border-white/40 hover:bg-white/5 transition-colors"
           >
             <Mail size={18} /> Email
           </MagneticButton>

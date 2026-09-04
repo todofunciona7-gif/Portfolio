@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         ink: '#171410',
+        'ink-2': '#1E1911',
         'ink-soft': '#211D14',
         cream: '#F7F3EA',
         'cream-alt': '#EEE6D2',

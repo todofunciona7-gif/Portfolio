@@ -15,11 +15,11 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled ? 'backdrop-blur-xl bg-cream/85 border-b border-border py-4' : 'bg-transparent py-6'
+          scrolled ? 'backdrop-blur-xl bg-ink/85 border-b border-white/10 py-4' : 'bg-transparent py-6'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-6 md:px-12 flex justify-between items-center">
-          <a href="#" className="font-display text-xl md:text-[22px] tracking-[0.01em]" data-cursor="hover">
+          <a href="#" className="font-display text-xl md:text-[22px] tracking-[0.01em] text-cream" data-cursor="hover">
             {siteName}
           </a>
 
@@ -28,11 +28,11 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-body text-sm font-medium text-ink hover:text-yellow-gold transition-colors relative group"
+                className="font-body text-sm font-medium text-cream/80 hover:text-yellow transition-colors relative group"
                 data-cursor="hover"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 h-[1px] bg-ink w-0 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 h-[1px] bg-yellow w-0 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
@@ -44,7 +44,7 @@ export default function Navbar() {
             Escribime
           </MagneticButton>
 
-          <button className="md:hidden p-2 z-50" onClick={() => setMobileOpen((v) => !v)} aria-label="Menú">
+          <button className="md:hidden p-2 z-50 text-cream" onClick={() => setMobileOpen((v) => !v)} aria-label="Menú">
             {mobileOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
@@ -56,7 +56,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-cream z-40 flex flex-col justify-center px-8 md:hidden"
+            className="fixed inset-0 bg-ink z-40 flex flex-col justify-center px-8 md:hidden"
           >
             <nav className="flex flex-col gap-7">
               {nav.map((item, i) => (
@@ -66,7 +66,7 @@ export default function Navbar() {
                   initial={{ x: -40, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.07, duration: 0.5 }}
-                  className="font-display text-4xl"
+                  className="font-display text-4xl text-cream"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
