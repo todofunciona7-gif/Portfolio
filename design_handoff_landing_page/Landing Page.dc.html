@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#F7F3EA;font-family:'Sora',sans-serif;color:#171410;-webkit-font-smoothing:antialiased}
+  a{color:#171410}
+  a:hover{color:#B8860B}
+  ::selection{background:#171410;color:#F4C430}
+  @media (max-width:860px){
+    .nav-links{display:none !important}
+    .hero-grid{grid-template-columns:1fr !important}
+    .hero-copy{grid-column:1 !important}
+    .stats-row{grid-template-columns:1fr !important}
+    .svc-grid{grid-template-columns:1fr !important}
+    .cases-grid{grid-template-columns:repeat(2,1fr) !important}
+    .process-row{grid-template-columns:1fr !important}
+    .pricing-grid{grid-template-columns:1fr !important}
+    .about-grid{grid-template-columns:1fr !important}
+    .footer-grid{grid-template-columns:1fr !important;gap:28px !important}
+  }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 48px" data-screen-label="header">
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:32px 0">
+    <div style="font-family:'Libre Caslon Text',serif;font-size:22px;letter-spacing:0.01em">Agostina Bellido</div>
+    <nav class="nav-links" style="display:flex;gap:36px;font-size:14px;font-weight:500">
+      <a href="#servicios" style="text-decoration:none">Servicios</a>
+      <a href="#casos" style="text-decoration:none">Casos</a>
+      <a href="#precios" style="text-decoration:none">Precios</a>
+      <a href="#faq" style="text-decoration:none">Preguntas</a>
+    </nav>
+    <a href="#contacto" style="text-decoration:none;background:#F4C430;color:#171410;padding:11px 22px;border-radius:2px;font-size:14px;font-weight:600">Escribime</a>
+  </header>
+</div>
+
+<section data-screen-label="hero" style="max-width:1240px;margin:0 auto;padding:56px 48px 96px">
+  <div class="hero-grid" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:center">
+    <div class="hero-copy" style="grid-column:1">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#171410;margin-bottom:22px">Community Manager &amp; gestión de redes</div>
+      <h1 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:clamp(40px,5.6vw,68px);line-height:1.05;margin:0 0 28px;letter-spacing:-0.01em">Estrategia y contenido<br>para marcas que quieren<br><em style="font-style:italic;background:#F4C430;color:#171410;padding:0 8px">crecer en serio.</em></h1>
+      <p style="font-size:18px;line-height:1.6;color:#55503F;max-width:480px;margin:0 0 36px">Gestiono redes sociales de punta a punta: estrategia, contenido, diseño y reportes. Cuatro años acompañando cuentas que necesitaban una voz clara y presencia constante.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#contacto" style="text-decoration:none;background:#171410;color:#F4C430;padding:15px 28px;border-radius:2px;font-size:15px;font-weight:600">Coordinemos una llamada</a>
+        <a href="#casos" style="text-decoration:none;border:1px solid #171410;color:#171410;padding:15px 28px;border-radius:2px;font-size:15px;font-weight:600">Ver casos</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <image-slot id="hero-photo" style="width:100%;height:520px" shape="rounded" radius="4" placeholder="Foto de Agostina"></image-slot>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="stats" style="background:#171410;padding:64px 0">
+  <div class="stats-row" style="max-width:1240px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center">
+    <div>
+      <div style="font-family:'Libre Caslon Text',serif;font-size:56px;color:#F4C430;line-height:1">8</div>
+      <div style="font-size:14px;color:#B8AC8C;margin-top:10px;letter-spacing:0.03em">cuentas gestionadas</div>
+    </div>
+    <div>
+      <div style="font-family:'Libre Caslon Text',serif;font-size:56px;color:#F4C430;line-height:1">+3.000</div>
+      <div style="font-size:14px;color:#B8AC8C;margin-top:10px;letter-spacing:0.03em">seguidores generados</div>
+    </div>
+    <div>
+      <div style="font-family:'Libre Caslon Text',serif;font-size:56px;color:#F4C430;line-height:1">4</div>
+      <div style="font-size:14px;color:#B8AC8C;margin-top:10px;letter-spacing:0.03em">años de experiencia</div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" data-screen-label="servicios" style="max-width:1240px;margin:0 auto;padding:112px 48px 96px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;gap:24px;flex-wrap:wrap">
+    <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:40px;margin:0">Servicios</h2>
+    <p style="max-width:420px;color:#55503F;font-size:15px;line-height:1.6;margin:0">Cada plan se adapta al momento de la marca. Esto es lo que puedo poner a trabajar para vos.</p>
+  </div>
+  <div class="svc-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E2D9BE;border:1px solid #E2D9BE">
+    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+      <div style="background:#F7F3EA;padding:40px 32px">
+        <div style="font-family:'Libre Caslon Text',serif;font-size:34px;color:#C9971A;margin-bottom:20px">{{ svc.n }}</div>
+        <div style="font-size:17px;font-weight:600;margin-bottom:10px">{{ svc.title }}</div>
+        <div style="font-size:14px;line-height:1.6;color:#55503F">{{ svc.desc }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="casos" data-screen-label="casos" style="background:#EEE6D2;padding:112px 0 96px">
+  <div style="max-width:1240px;margin:0 auto;padding:0 48px">
+    <div style="margin-bottom:56px">
+      <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:40px;margin:0 0 14px">Cuentas que gestioné</h2>
+      <p style="max-width:520px;color:#55503F;font-size:15px;line-height:1.6;margin:0">8 marcas, 8 rubros distintos. Reemplazá cada casilla con la captura real de la cuenta.</p>
+    </div>
+    <div class="cases-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="8">
+        <div>
+          <image-slot id="{{ c.slotId }}" style="width:100%;height:190px" shape="rounded" radius="4" placeholder="Captura del cliente"></image-slot>
+          <div style="margin-top:14px">
+            <div style="font-size:14px;font-weight:600">{{ c.name }}</div>
+            <div style="font-size:13px;color:#6B6555;margin-top:2px">{{ c.category }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="forma-de-trabajo" style="max-width:1240px;margin:0 auto;padding:112px 48px 96px">
+  <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:40px;margin:0 0 56px">Cómo trabajamos</h2>
+  <div class="process-row" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+    <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+      <div style="border-top:2px solid #171410;padding-top:24px">
+        <div style="font-family:'Libre Caslon Text',serif;font-size:15px;color:#C9971A;margin-bottom:16px">{{ step.n }}</div>
+        <div style="font-size:17px;font-weight:600;margin-bottom:10px">{{ step.title }}</div>
+        <div style="font-size:14px;line-height:1.6;color:#55503F">{{ step.desc }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="precios" data-screen-label="precios" style="background:#171410;padding:112px 0 96px">
+  <div style="max-width:1240px;margin:0 auto;padding:0 48px">
+    <div style="margin-bottom:56px">
+      <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:40px;color:#F7F3EA;margin:0 0 14px">Planes</h2>
+      <p style="max-width:520px;color:#B8AC8C;font-size:15px;line-height:1.6;margin:0">Los valores se definen según objetivos y volumen de contenido. Estas son las tres formas de trabajo más comunes.</p>
+    </div>
+    <div class="pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ plans }}" as="plan" hint-placeholder-count="3">
+        <div style="background:{{ plan.bg }};padding:40px 32px;border-radius:2px;display:flex;flex-direction:column;position:relative">
+          <sc-if value="{{ plan.badge }}">
+            <div style="position:absolute;top:-13px;left:32px;background:#F3C6A5;color:#171410;font-size:12px;font-weight:700;padding:5px 12px;border-radius:2px">{{ plan.badge }}</div>
+          </sc-if>
+          <div style="font-family:'Libre Caslon Text',serif;font-size:24px;color:{{ plan.textColor }};margin-bottom:10px">{{ plan.name }}</div>
+          <div style="font-size:14px;color:{{ plan.subColor }};margin-bottom:24px;line-height:1.5">{{ plan.tagline }}</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;flex:1">
+            <sc-for list="{{ plan.features }}" as="f" hint-placeholder-count="4">
+              <div style="font-size:14px;color:{{ plan.textColor }};display:flex;gap:10px;line-height:1.5">
+                <span style="color:{{ plan.accentColor }}">—</span>{{ f }}
+              </div>
+            </sc-for>
+          </div>
+          <a href="#contacto" style="text-decoration:none;text-align:center;background:{{ plan.ctaBg }};color:{{ plan.ctaColor }};border:1px solid {{ plan.ctaBorder }};padding:13px 0;border-radius:2px;font-size:14px;font-weight:600">Consultar valor</a>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="sobre-mi" style="max-width:1240px;margin:0 auto;padding:112px 48px 96px">
+  <div class="about-grid" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:64px;align-items:center">
+    <image-slot id="about-photo" style="width:100%;height:420px" shape="rounded" radius="4" placeholder="Foto personal"></image-slot>
+    <div>
+      <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:36px;margin:0 0 24px">Sobre mí</h2>
+      <p style="font-size:16px;line-height:1.7;color:#55503F;margin:0 0 20px">Me llamo Agostina Bellido y hace cuatro años trabajo gestionando redes sociales para marcas y emprendimientos. Empecé manejando una cuenta y hoy acompaño a ocho, cada una con su propia identidad y su propio ritmo.</p>
+      <p style="font-size:16px;line-height:1.7;color:#55503F;margin:0">Creo en el trabajo prolijo: calendarios claros, contenido pensado y reportes que muestran resultados reales, no vueltas. Si tu marca necesita presencia constante y una estrategia detrás, hablemos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="faq" style="background:#EEE6D2;padding:112px 0 96px">
+  <div style="max-width:820px;margin:0 auto;padding:0 48px">
+    <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:40px;margin:0 0 48px">Preguntas frecuentes</h2>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
+        <details style="border-bottom:1px solid #E2D9BE;padding:22px 0">
+          <summary style="cursor:pointer;font-size:16px;font-weight:600;list-style:none">{{ faq.q }}</summary>
+          <p style="font-size:15px;line-height:1.7;color:#55503F;margin:14px 0 0">{{ faq.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" data-screen-label="contacto" style="max-width:1240px;margin:0 auto;padding:112px 48px 120px;text-align:center">
+  <h2 style="font-family:'Libre Caslon Text',serif;font-weight:400;font-size:clamp(36px,5vw,54px);margin:0 0 24px;max-width:720px;margin-left:auto;margin-right:auto">Hablemos de tu próxima estrategia de contenido.</h2>
+  <p style="font-size:16px;color:#55503F;max-width:480px;margin:0 auto 40px">Contame de tu marca y en 24hs te respondo con los próximos pasos.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="https://wa.me/5490000000000" target="_blank" style="text-decoration:none;background:#F4C430;color:#171410;padding:16px 32px;border-radius:2px;font-size:15px;font-weight:600">WhatsApp</a>
+    <a href="https://linkedin.com" target="_blank" style="text-decoration:none;border:1px solid #171410;color:#171410;padding:16px 32px;border-radius:2px;font-size:15px;font-weight:600">LinkedIn</a>
+    <a href="mailto:hola@agostinabellido.com" style="text-decoration:none;border:1px solid #171410;color:#171410;padding:16px 32px;border-radius:2px;font-size:15px;font-weight:600">Email</a>
+  </div>
+</section>
+
+<footer data-screen-label="footer" style="border-top:1px solid #E2D9BE;padding:40px 0">
+  <div class="footer-grid" style="max-width:1240px;margin:0 auto;padding:0 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div style="font-family:'Libre Caslon Text',serif;font-size:16px">Agostina Bellido</div>
+    <div style="font-size:13px;color:#6B6555">© 2026. Community Manager &amp; gestión de redes.</div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        {n:'01', title:'Gestión de redes sociales', desc:'Manejo integral de las cuentas: publicaciones, comunidad y presencia diaria.'},
+        {n:'02', title:'Creación de contenido', desc:'Ideas, guiones y piezas pensadas para cada plataforma y audiencia.'},
+        {n:'03', title:'Diseño gráfico para posts', desc:'Piezas visuales coherentes con la identidad de cada marca.'},
+        {n:'04', title:'Estrategia y calendario editorial', desc:'Planificación mensual con objetivos claros y contenido distribuido en el tiempo.'},
+        {n:'05', title:'Fotografía / Video', desc:'Producción de material propio para reels, historias y feed.'},
+      ],
+      cases: [1,2,3,4,5,6,7,8].map(i => ({slotId:'case-'+i, name:'Cliente 0'+i, category:'[Rubro a completar]'})),
+      steps: [
+        {n:'PASO 1', title:'Diagnóstico', desc:'Reviso la cuenta y el contexto de la marca para entender dónde está parada.'},
+        {n:'PASO 2', title:'Estrategia', desc:'Defino objetivos, tono y calendario de contenidos junto con la marca.'},
+        {n:'PASO 3', title:'Ejecución', desc:'Producción y publicación constante de contenido, día a día.'},
+        {n:'PASO 4', title:'Reporte', desc:'Métricas y resultados presentados en un informe simple y claro.'},
+      ],
+      plans: [
+        {name:'Esencial', badge:'', tagline:'Presencia constante en redes, gestión básica.', bg:'#211D14', textColor:'#F7F3EA', subColor:'#B8AC8C', accentColor:'#F4C430', ctaBg:'transparent', ctaColor:'#F7F3EA', ctaBorder:'#F4C430',
+          features:['Gestión de 1 red social','Calendario de contenido mensual','Diseño de piezas gráficas','Reporte mensual']},
+        {name:'Crecimiento', badge:'Más elegido', tagline:'La opción más elegida para marcas en expansión.', bg:'#F4C430', textColor:'#171410', subColor:'#5A4712', accentColor:'#171410', ctaBg:'#171410', ctaColor:'#F4C430', ctaBorder:'transparent',
+          features:['Gestión de hasta 3 redes sociales','Estrategia y calendario editorial','Diseño y producción de contenido','Fotografía / video mensual','Reporte de métricas mensual']},
+        {name:'Integral', badge:'', tagline:'Gestión completa para marcas con mayor volumen.', bg:'#211D14', textColor:'#F7F3EA', subColor:'#B8AC8C', accentColor:'#F4C430', ctaBg:'transparent', ctaColor:'#F7F3EA', ctaBorder:'#F4C430',
+          features:['Gestión multiplataforma','Estrategia de contenido a medida','Producción fotográfica y video','Comunidad y respuesta a mensajes','Reportes y reuniones periódicas']},
+      ],
+      faqs: [
+        {q:'¿Qué incluye la gestión de redes sociales?', a:'Incluye estrategia, calendario de contenidos, diseño de piezas, publicación y reportes de resultados. El alcance exacto se define según el plan elegido.'},
+        {q:'¿Cuánto tardan en verse resultados?', a:'Depende del punto de partida de cada cuenta y del objetivo. Lo conversamos en la primera llamada para armar expectativas realistas.'},
+        {q:'¿Trabajás con qué plataformas?', a:'Instagram, TikTok, LinkedIn y Facebook son las más frecuentes. Si tu marca necesita otra plataforma, lo evaluamos juntas.'},
+        {q:'¿Cómo es la forma de pago?', a:'Se coordina según el plan y la duración del contrato. Lo definimos antes de arrancar, sin sorpresas.'},
+        {q:'¿Puedo cambiar de plan más adelante?', a:'Sí. Los planes se ajustan a medida que la cuenta crece o cambian los objetivos de la marca.'},
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
