@@ -51,23 +51,27 @@ export default function CustomCursor() {
     default: { width: 10, height: 10, x: '-50%', y: '-50%', borderRadius: '50%', backgroundColor: '#F7F3EA', opacity: 1 },
     hover: { width: 46, height: 46, x: '-50%', y: '-50%', borderRadius: '50%', backgroundColor: '#F7F3EA', opacity: 1 },
     text: { width: 3, height: 22, x: '-2px', y: '-11px', borderRadius: '2px', backgroundColor: '#F7F3EA', opacity: 1 },
+    view: { width: 64, height: 64, x: '-50%', y: '-50%', borderRadius: '50%', backgroundColor: '#F7F3EA', opacity: 1 },
   }
 
   const trailingVariants = {
     default: { width: 30, height: 30, opacity: 0.35, border: '1px solid #F7F3EA', backgroundColor: 'transparent' },
     hover: { opacity: 0 },
     text: { opacity: 0 },
+    view: { opacity: 0 },
   }
 
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 z-[9999] pointer-events-none flex justify-center items-center text-cream font-body text-[10px] tracking-widest font-bold overflow-hidden mix-blend-difference"
+        className="fixed top-0 left-0 z-[9999] pointer-events-none flex justify-center items-center text-ink font-body text-[10px] tracking-widest font-bold overflow-hidden mix-blend-difference"
         style={{ x: springX, y: springY }}
         variants={variants}
         animate={cursorState}
         transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-      />
+      >
+        {cursorState === 'view' && 'VER'}
+      </motion.div>
       <motion.div
         className="fixed top-0 left-0 z-[9998] pointer-events-none rounded-full mix-blend-difference"
         style={{ x: trailX, y: trailY, transform: 'translate(-50%, -50%)' }}
