@@ -31,6 +31,7 @@ export default {
         'marquee-reverse': 'marquee 28s linear infinite reverse',
         float: 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s ease-in-out infinite',
+        ripple: 'ripple 1.5s ease infinite',
       },
       keyframes: {
         marquee: {
@@ -40,6 +41,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-16px)' },
+        },
+        ripple: {
+          '0%, 60%, 100%': { backgroundColor: 'transparent' },
+          '30%': { backgroundColor: '#F4C430' },
         },
       },
       backgroundImage: {
