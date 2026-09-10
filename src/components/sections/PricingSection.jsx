@@ -28,8 +28,8 @@ export default function PricingSection() {
         <ScrollReveal className="mb-12 md:mb-14">
           <h2 className="font-display font-normal text-[40px] text-cream mb-3.5">Planes</h2>
           <p className="max-w-[520px] text-muted-dark text-[15px] leading-[1.6]">
-            Los valores se definen según objetivos y volumen de contenido. Estas son las tres formas de trabajo
-            más comunes.
+            Defino los valores según objetivos y volumen de contenido. Estas son las tres formas de trabajo que
+            más uso.
           </p>
         </ScrollReveal>
 

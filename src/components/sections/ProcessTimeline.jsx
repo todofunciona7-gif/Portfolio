@@ -12,9 +12,9 @@ export default function ProcessTimeline() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <ScrollReveal className="flex flex-col items-start text-left">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow mb-3">
-              Nuestro proceso
+              Mi proceso
             </span>
-            <h2 className="font-display font-normal text-[40px] mb-4 text-cream">Cómo trabajamos</h2>
+            <h2 className="font-display font-normal text-[40px] mb-4 text-cream">Cómo trabajo</h2>
             <p className="text-muted-dark text-[15px] leading-[1.6] mb-8 max-w-sm">
               Creo en el trabajo prolijo: calendarios claros, contenido pensado y reportes que muestran
               resultados reales.

@@ -3,13 +3,15 @@ export const siteName = 'Agostina Bellido'
 export const nav = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Casos', href: '#casos' },
+  { label: 'Testimonios', href: '#testimonios' },
+  { label: 'Formación', href: '#formacion' },
   { label: 'Precios', href: '#precios' },
   { label: 'Preguntas', href: '#faq' },
 ]
 
 export const stats = [
-  { num: 8, label: 'cuentas gestionadas' },
-  { num: 3000, label: 'seguidores generados', prefix: '+' },
+  { num: 8, label: 'clientes gestionados' },
+  { num: 3000, label: 'seguidores nuevos generados', prefix: '+' },
   { num: 4, label: 'años de experiencia' },
 ]
 
@@ -25,6 +27,12 @@ export const cases = [1, 2, 3, 4, 5, 6, 7, 8].map((i) => ({
   id: i,
   name: `Cliente 0${i}`,
   category: '[Rubro a completar]',
+  description: '[Breve descripción del proyecto a completar]',
+  metrics: [
+    { label: 'Crecimiento de seguidores', value: '[dato a completar]' },
+    { label: 'Alcance mensual', value: '[dato a completar]' },
+    { label: 'Engagement', value: '[dato a completar]' },
+  ],
 }))
 
 export const steps = [
@@ -71,9 +79,30 @@ export const plans = [
 ]
 
 export const about = {
+  // TODO: reemplazar por el texto personalizado que va a pasar Agostina (pidió sacar el genérico)
   p1: 'Me llamo Agostina Bellido y hace cuatro años trabajo gestionando redes sociales para marcas y emprendimientos. Empecé manejando una cuenta y hoy acompaño a ocho, cada una con su propia identidad y su propio ritmo.',
   p2: 'Creo en el trabajo prolijo: calendarios claros, contenido pensado y reportes que muestran resultados reales, no vueltas. Si tu marca necesita presencia constante y una estrategia detrás, hablemos.',
+  specialties: [
+    'Crecimiento orgánico en Instagram',
+    'Estrategia de reels',
+    'Gestión de comunidad',
+    'Lanzamientos digitales',
+  ],
 }
+
+export const testimonials = [1, 2, 3].map((i) => ({
+  id: i,
+  quote: '[Testimonio a completar]',
+  name: '[Nombre a completar]',
+  role: '[Marca / cargo a completar]',
+}))
+
+export const formations = [1, 2, 3].map((i) => ({
+  id: i,
+  title: '[Formación a completar]',
+  institution: '[Institución a completar]',
+  year: '[Año a completar]',
+}))
 
 export const faqs = [
   { q: '¿Qué incluye la gestión de redes sociales?', a: 'Incluye estrategia, calendario de contenidos, diseño de piezas, publicación y reportes de resultados. El alcance exacto se define según el plan elegido.' },

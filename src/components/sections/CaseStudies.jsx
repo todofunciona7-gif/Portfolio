@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ChevronRight } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import ImagePlaceholder from '../ui/ImagePlaceholder'
 import ScrollReveal from '../ui/ScrollReveal'
 import { cases } from '../../data/content'
@@ -17,7 +17,7 @@ function CaseBlock({ c, index }) {
         isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
       } items-center gap-10 md:gap-16 py-16 md:py-20 border-b border-white/10 last:border-b-0`}
     >
-      <a href="#" data-cursor="view" aria-label={`Ver caso: ${c.name}`} className="relative shrink-0 group">
+      <div className="relative shrink-0">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
@@ -28,28 +28,47 @@ function CaseBlock({ c, index }) {
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute inset-0 rounded-full bg-yellow blur-3xl opacity-[0.12]"
         />
-        <div className="relative h-56 w-56 md:h-72 md:w-72 rounded-full overflow-hidden transition-transform duration-500 group-hover:scale-[1.03]">
+        <div className="relative h-56 w-56 md:h-72 md:w-72 rounded-full overflow-hidden">
           <ImagePlaceholder label="Captura del cliente" height="h-full" rounded="rounded-full" />
         </div>
-        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap">
-          <div className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-muted-dark bg-ink px-4 py-2 rounded-full border border-white/10">
-            <span className="h-1.5 w-1.5 rounded-full bg-yellow animate-pulse-slow" />
-            {c.name}
-          </div>
+        <div className="absolute -bottom-4 -right-2 h-16 w-16 rounded-full border-2 border-ink overflow-hidden shadow-lg">
+          <ImagePlaceholder label="Logo" height="h-full" rounded="rounded-full" />
         </div>
-      </a>
+      </div>
 
       <div className={`flex-1 max-w-md flex flex-col ${isLeft ? 'items-start text-left' : 'items-end text-right'}`}>
         <div className="text-xs uppercase tracking-[0.2em] text-muted-dark mb-3">{c.category}</div>
         <h3 className="font-display text-3xl md:text-4xl text-cream mb-6">{c.name}</h3>
-        <a
-          href="#"
-          data-cursor="view"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-yellow group"
-        >
-          Ver caso
-          <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+
+        <details className={`group w-full ${isLeft ? 'text-left' : 'text-right'}`}>
+          <summary
+            data-cursor="view"
+            className={`inline-flex items-center gap-2 text-sm font-semibold text-yellow cursor-pointer list-none ${
+              isLeft ? '' : 'flex-row-reverse'
+            }`}
+          >
+            Ver más información
+            <Plus size={16} className="shrink-0 transition-transform duration-300 group-open:rotate-45" />
+          </summary>
+
+          <div className={`mt-6 flex flex-col gap-6 ${isLeft ? 'items-start' : 'items-end'}`}>
+            <p className="text-sm leading-[1.6] text-muted-dark">{c.description}</p>
+
+            <div className="grid grid-cols-2 gap-3 w-full">
+              <ImagePlaceholder label="Antes" height="h-32" />
+              <ImagePlaceholder label="Después" height="h-32" />
+            </div>
+
+            <div className={`flex flex-wrap gap-6 w-full ${isLeft ? 'justify-start' : 'justify-end'}`}>
+              {c.metrics.map((m) => (
+                <div key={m.label} className={isLeft ? 'text-left' : 'text-right'}>
+                  <div className="font-display text-xl text-cream leading-none">{m.value}</div>
+                  <div className="text-[11px] text-muted-dark uppercase tracking-wider mt-1">{m.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </details>
       </div>
     </motion.div>
   )
@@ -62,8 +81,8 @@ export default function CaseStudies() {
         <ScrollReveal className="mb-4 md:mb-6">
           <h2 className="font-display font-normal text-[40px] mb-3.5 text-cream">Cuentas que gestioné</h2>
           <p className="max-w-[520px] text-muted-dark text-[15px] leading-[1.6]">
-            8 marcas, 8 rubros distintos. Cada una va a tener su propia página de caso con capturas reales,
-            resultados y el detalle del trabajo.
+            8 marcas, 8 rubros distintos. De cada una te muestro capturas reales, resultados y el detalle del
+            trabajo que hice.
           </p>
         </ScrollReveal>
 

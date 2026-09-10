@@ -7,7 +7,7 @@ const [firstName, lastName] = siteName.split(' ')
 
 export default function StorySection() {
   return (
-    <section className="bg-ink-2 py-28 md:py-36 overflow-hidden">
+    <section id="sobre-mi" className="bg-ink-2 pt-36 md:pt-44 pb-28 md:pb-36 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12">
         <div className="text-center text-xs uppercase tracking-[0.2em] text-muted-dark mb-10">Sobre mí</div>
 
@@ -45,6 +45,17 @@ export default function StorySection() {
         <ScrollReveal className="max-w-2xl mx-auto text-center">
           <p className="text-base leading-[1.7] text-muted-dark mb-5">{about.p1}</p>
           <p className="text-base leading-[1.7] text-muted-dark">{about.p2}</p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1} className="flex flex-wrap justify-center gap-3 mt-10 max-w-2xl mx-auto">
+          {about.specialties.map((s) => (
+            <span
+              key={s}
+              className="text-xs md:text-[13px] font-semibold uppercase tracking-[0.05em] text-ink bg-yellow px-4 py-2 rounded-full"
+            >
+              {s}
+            </span>
+          ))}
         </ScrollReveal>
       </div>
     </section>
