@@ -15,7 +15,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled ? 'backdrop-blur-xl bg-ink/85 border-b border-white/10 py-4' : 'bg-transparent py-6'
+          scrolled ? 'backdrop-blur-xl bg-paper/85 border-b border-ink/10 py-4' : 'bg-transparent py-6'
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-6 md:px-12 flex justify-between items-center">
@@ -28,18 +28,18 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-body text-sm font-medium text-cream/80 hover:text-yellow transition-colors relative group"
+                className="font-body text-sm font-medium text-cream/80 hover:text-lavender-deep transition-colors relative group"
                 data-cursor="hover"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 h-[1px] bg-yellow w-0 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 h-[1px] bg-lavender w-0 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
           <MagneticButton
             href="#contacto"
-            className="hidden md:inline-block bg-yellow text-ink px-[22px] py-[11px] rounded-[2px] text-sm font-semibold"
+            className="hidden md:inline-block bg-lavender text-ink px-[22px] py-[11px] rounded-[2px] text-sm font-semibold"
           >
             Escribime
           </MagneticButton>
@@ -56,7 +56,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-ink z-40 flex flex-col justify-center px-8 md:hidden"
+            className="fixed inset-0 bg-paper z-40 flex flex-col justify-center px-8 md:hidden"
           >
             <nav className="flex flex-col gap-7">
               {nav.map((item, i) => (
@@ -78,7 +78,7 @@ export default function Navbar() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.28, duration: 0.5 }}
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 inline-block w-fit bg-yellow text-ink px-6 py-3 rounded-[2px] font-semibold"
+                className="mt-4 inline-block w-fit bg-lavender text-ink px-6 py-3 rounded-[2px] font-semibold"
               >
                 Escribime
               </motion.a>

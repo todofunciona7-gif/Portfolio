@@ -4,7 +4,7 @@ import { formations } from '../../data/content'
 
 export default function FormationsSection() {
   return (
-    <section id="formacion" className="bg-ink py-24 md:py-28">
+    <section id="formacion" className="bg-paper py-24 md:py-28">
       <div className="max-w-[820px] mx-auto px-6 md:px-12">
         <ScrollReveal>
           <h2 className="font-display font-normal text-[40px] mb-12 text-cream">Formación</h2>
@@ -15,9 +15,9 @@ export default function FormationsSection() {
             <ScrollReveal
               key={f.id}
               delay={i * 0.06}
-              className="flex items-start gap-5 py-6 border-b border-white/10 last:border-b-0"
+              className="flex items-start gap-5 py-6 border-b border-ink/10 last:border-b-0"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-ink-soft text-yellow">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-ink/10 bg-paper-soft text-lavender-deep">
                 <GraduationCap size={20} strokeWidth={1.75} />
               </div>
               <div>

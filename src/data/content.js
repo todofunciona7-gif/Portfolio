@@ -54,7 +54,7 @@ export const plans = [
     name: 'Crecimiento',
     badge: 'Más elegido',
     tagline: 'La opción más elegida para marcas en expansión.',
-    variant: 'yellow',
+    variant: 'lavender',
     features: [
       'Gestión de hasta 3 redes sociales',
       'Estrategia y calendario editorial',

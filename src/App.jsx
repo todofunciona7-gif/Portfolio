@@ -42,7 +42,7 @@ export default function App() {
             key="loader"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="fixed inset-0 z-[200] bg-ink flex items-center justify-center"
+            className="fixed inset-0 z-[200] bg-paper flex items-center justify-center"
           >
             <Loader />
           </motion.div>
@@ -53,7 +53,7 @@ export default function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: loading ? 0 : 1 }}
         transition={{ duration: 0.6, ease: 'easeInOut', delay: loading ? 0 : 0.1 }}
-        className="relative bg-ink font-body text-cream overflow-x-hidden"
+        className="relative bg-paper font-body text-cream overflow-x-hidden"
       >
         <ScrollProgressBar />
         <Navbar />

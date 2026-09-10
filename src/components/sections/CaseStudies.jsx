@@ -6,6 +6,8 @@ import { cases } from '../../data/content'
 
 function CaseBlock({ c, index }) {
   const isLeft = index % 2 === 0
+  const ringClass = isLeft ? 'border-lavender/30' : 'border-lavender-deep/30'
+  const glowClass = isLeft ? 'bg-lavender' : 'bg-lavender-deep'
 
   return (
     <motion.div
@@ -15,23 +17,23 @@ function CaseBlock({ c, index }) {
       transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={`flex flex-col md:flex-row ${
         isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-      } items-center gap-10 md:gap-16 py-16 md:py-20 border-b border-white/10 last:border-b-0`}
+      } items-center gap-10 md:gap-16 py-16 md:py-20 border-b border-ink/10 last:border-b-0`}
     >
       <div className="relative shrink-0">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-          className="absolute inset-[-14%] rounded-full border border-dashed border-yellow/20"
+          className={`absolute inset-[-14%] rounded-full border border-dashed ${ringClass}`}
         />
         <motion.div
           animate={{ scale: [1, 1.06, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute inset-0 rounded-full bg-yellow blur-3xl opacity-[0.12]"
+          className={`absolute inset-0 rounded-full ${glowClass} blur-3xl opacity-[0.14]`}
         />
         <div className="relative h-56 w-56 md:h-72 md:w-72 rounded-full overflow-hidden">
           <ImagePlaceholder label="Captura del cliente" height="h-full" rounded="rounded-full" />
         </div>
-        <div className="absolute -bottom-4 -right-2 h-16 w-16 rounded-full border-2 border-ink overflow-hidden shadow-lg">
+        <div className="absolute -bottom-4 -right-2 h-16 w-16 rounded-full border-2 border-paper overflow-hidden shadow-lg">
           <ImagePlaceholder label="Logo" height="h-full" rounded="rounded-full" />
         </div>
       </div>
@@ -43,7 +45,7 @@ function CaseBlock({ c, index }) {
         <details className={`group w-full ${isLeft ? 'text-left' : 'text-right'}`}>
           <summary
             data-cursor="view"
-            className={`inline-flex items-center gap-2 text-sm font-semibold text-yellow cursor-pointer list-none ${
+            className={`inline-flex items-center gap-2 text-sm font-semibold text-lavender-deep cursor-pointer list-none ${
               isLeft ? '' : 'flex-row-reverse'
             }`}
           >
@@ -76,7 +78,7 @@ function CaseBlock({ c, index }) {
 
 export default function CaseStudies() {
   return (
-    <section id="casos" className="bg-ink py-24 md:py-28">
+    <section id="casos" className="bg-paper py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12">
         <ScrollReveal className="mb-4 md:mb-6">
           <h2 className="font-display font-normal text-[40px] mb-3.5 text-cream">Cuentas que gestioné</h2>

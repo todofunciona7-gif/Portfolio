@@ -18,7 +18,7 @@ const socials = [
 
 export default function CTASection() {
   return (
-    <section id="contacto" className="bg-ink px-6 md:px-12 pt-24 md:pt-28 pb-28 md:pb-32">
+    <section id="contacto" className="bg-paper px-6 md:px-12 pt-24 md:pt-28 pb-28 md:pb-32">
       <div className="max-w-[1240px] mx-auto text-center">
         <ScrollReveal>
           <h2 className="font-display font-normal text-[clamp(36px,5vw,54px)] mb-6 max-w-[720px] mx-auto text-cream">
@@ -30,7 +30,7 @@ export default function CTASection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1} className="flex justify-center">
-          <div className="rounded-3xl bg-ink-soft/80 border border-white/10 backdrop-blur-xl shadow-[0_0_60px_rgba(244,196,48,0.12)] px-10 py-12 md:px-16">
+          <div className="rounded-3xl bg-paper-soft/80 border border-ink/10 backdrop-blur-xl shadow-[0_0_60px_rgba(169,133,177,0.25)] px-10 py-12 md:px-16">
             <div className="flex flex-wrap justify-center gap-10 md:gap-14">
               {socials.map(({ key, label, href, external, Icon }) => (
                 <a
@@ -41,7 +41,7 @@ export default function CTASection() {
                   data-cursor="hover"
                   className="group flex flex-col items-center"
                 >
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-white/5 border border-white/10 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:bg-yellow group-hover:shadow-[0_0_25px_rgba(244,196,48,0.6)]">
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-ink/5 border border-ink/10 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:bg-lavender group-hover:shadow-[0_0_25px_rgba(169,133,177,0.6)]">
                     <span className="group-hover:animate-shake">
                       <Icon size={30} strokeWidth={1.75} className="text-cream transition-colors duration-300 group-hover:text-ink" />
                     </span>

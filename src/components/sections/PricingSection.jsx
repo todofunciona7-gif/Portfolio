@@ -4,26 +4,26 @@ import { plans } from '../../data/content'
 
 const variantStyles = {
   dark: {
-    card: 'bg-ink-soft',
+    card: 'bg-paper-soft',
     title: 'text-cream',
     tagline: 'text-muted-dark',
     feature: 'text-cream',
-    dash: 'text-yellow',
-    cta: 'border border-yellow text-cream hover:bg-yellow hover:text-ink transition-colors',
+    dash: 'text-lavender-deep',
+    cta: 'border border-lavender text-cream hover:bg-lavender hover:text-ink transition-colors',
   },
-  yellow: {
-    card: 'bg-yellow',
+  lavender: {
+    card: 'bg-lavender',
     title: 'text-ink',
     tagline: 'text-ink/70',
     feature: 'text-ink',
     dash: 'text-ink',
-    cta: 'bg-ink text-yellow',
+    cta: 'bg-ink text-lavender',
   },
 }
 
 export default function PricingSection() {
   return (
-    <section id="precios" className="bg-ink py-24 md:py-28">
+    <section id="precios" className="bg-paper py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12">
         <ScrollReveal className="mb-12 md:mb-14">
           <h2 className="font-display font-normal text-[40px] text-cream mb-3.5">Planes</h2>
@@ -40,7 +40,7 @@ export default function PricingSection() {
               <ScrollReveal key={plan.name} delay={i * 0.08} className="relative">
                 <div className={`${v.card} rounded-[2px] p-10 md:p-8 flex flex-col h-full relative`}>
                   {plan.badge && (
-                    <div className="absolute -top-[13px] left-8 bg-peach text-ink text-xs font-bold px-3 py-[5px] rounded-[2px]">
+                    <div className="absolute -top-[13px] left-8 bg-paper text-ink text-xs font-bold px-3 py-[5px] rounded-[2px]">
                       {plan.badge}
                     </div>
                   )}

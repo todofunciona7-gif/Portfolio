@@ -37,7 +37,7 @@ export default function CursorGlow() {
     <motion.div
       ref={ref}
       style={{ scale: springScale }}
-      className="fixed top-0 left-0 w-[600px] h-[600px] rounded-full bg-yellow/[0.12] blur-[110px] pointer-events-none z-40 mix-blend-screen"
+      className="fixed top-0 left-0 w-[600px] h-[600px] rounded-full bg-lavender/[0.12] blur-[110px] pointer-events-none z-40 mix-blend-screen"
     />
   )
 }

@@ -7,11 +7,11 @@ const stepIcons = [Search, Target, Rocket, BarChart3]
 
 export default function ProcessTimeline() {
   return (
-    <section className="bg-ink-2 py-24 md:py-28">
+    <section className="bg-paper-2 py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <ScrollReveal className="flex flex-col items-start text-left">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow mb-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-lavender-deep mb-3">
               Mi proceso
             </span>
             <h2 className="font-display font-normal text-[40px] mb-4 text-cream">Cómo trabajo</h2>
@@ -21,7 +21,7 @@ export default function ProcessTimeline() {
             </p>
             <MagneticButton
               href="#contacto"
-              className="inline-flex items-center gap-2 bg-yellow text-ink px-6 py-3 rounded-[2px] text-sm font-semibold"
+              className="inline-flex items-center gap-2 bg-lavender text-ink px-6 py-3 rounded-[2px] text-sm font-semibold"
             >
               Coordinemos una llamada
               <ArrowUpRight size={17} />
@@ -33,8 +33,8 @@ export default function ProcessTimeline() {
               const Icon = stepIcons[i]
               return (
                 <ScrollReveal key={step.n} delay={i * 0.08} className="relative group">
-                  <div className="absolute -left-4 top-1/2 hidden h-1/2 w-px -translate-y-1/2 bg-white/10 transition-colors group-hover:bg-yellow sm:block" />
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-ink text-yellow transition-colors duration-300 group-hover:bg-yellow group-hover:text-ink">
+                  <div className="absolute -left-4 top-1/2 hidden h-1/2 w-px -translate-y-1/2 bg-ink/10 transition-colors group-hover:bg-lavender sm:block" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-ink/10 bg-paper text-lavender-deep transition-colors duration-300 group-hover:bg-lavender group-hover:text-ink">
                     <Icon size={22} strokeWidth={1.75} />
                   </div>
                   <div className="text-[13px] font-semibold uppercase tracking-widest text-muted-dark mb-1">

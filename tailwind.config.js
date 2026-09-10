@@ -5,22 +5,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#171410',
-        'ink-2': '#1E1911',
-        'ink-soft': '#211D14',
-        cream: '#F7F3EA',
-        'cream-alt': '#EEE6D2',
-        yellow: {
-          DEFAULT: '#F4C430',
-          gold: '#C9971A',
+        paper: '#FEEB9C',
+        'paper-2': '#FBDD82',
+        'paper-soft': '#FFF9E6',
+        ink: '#3A1024',
+        cream: '#4A1530',
+        'cream-alt': '#6B2C48',
+        lavender: {
+          DEFAULT: '#A985B1',
+          deep: '#6B3D73',
+          soft: '#F1E4F2',
         },
-        peach: '#F3C6A5',
         muted: {
-          DEFAULT: '#55503F',
-          dark: '#B8AC8C',
-          footer: '#6B6555',
+          DEFAULT: '#8C5D74',
+          dark: '#7A4F63',
+          footer: '#8C6478',
         },
-        border: '#E2D9BE',
+        border: '#F0DFA8',
       },
       fontFamily: {
         display: ['"Libre Caslon Text"', 'serif'],
@@ -45,7 +46,7 @@ export default {
         },
         ripple: {
           '0%, 60%, 100%': { backgroundColor: 'transparent' },
-          '30%': { backgroundColor: '#F4C430' },
+          '30%': { backgroundColor: '#A985B1' },
         },
         shake: {
           '0%, 100%': { transform: 'translateX(0) rotate(0)' },
