@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import BlurText from '../ui/BlurText'
-import ImagePlaceholder from '../ui/ImagePlaceholder'
 import ScrollReveal from '../ui/ScrollReveal'
 import { about, siteName } from '../../data/content'
 
@@ -53,7 +52,11 @@ export default function StorySection() {
             <div className="absolute -inset-5 rounded-[2.5rem] bg-lavender/20 blur-3xl" />
             <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-full bg-lavender-soft" />
             <div className="relative h-[420px] md:h-[480px] rounded-[2rem] overflow-hidden shadow-2xl" data-cursor="hover">
-              <ImagePlaceholder label="Foto personal" height="h-full" rounded="rounded-[2rem]" />
+              <img
+                src="/agostina.webp"
+                alt="Agostina Bellido"
+                className="h-full w-full object-cover object-[center_30%]"
+              />
             </div>
             <motion.div
               animate={{ rotate: 360 }}

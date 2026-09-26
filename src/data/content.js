@@ -23,17 +23,96 @@ export const services = [
   { n: '05', title: 'Fotografía / Video', desc: 'Producción de material propio para reels, historias y feed.' },
 ]
 
-export const cases = [1, 2, 3, 4, 5, 6, 7, 8].map((i) => ({
-  id: i,
-  name: `Cliente 0${i}`,
-  category: '[Rubro a completar]',
-  description: '[Breve descripción del proyecto a completar]',
-  metrics: [
-    { label: 'Crecimiento de seguidores', value: '[dato a completar]' },
-    { label: 'Alcance mensual', value: '[dato a completar]' },
-    { label: 'Engagement', value: '[dato a completar]' },
-  ],
-}))
+// Casos reales. Imágenes en public/casos/ (originales sin procesar en
+// fuentes/casos/, fuera de git). `antes`/`despues` en null = captura
+// pendiente: se muestra un recuadro "Próximamente". `logoFit`: 'cover'
+// para logos redondos/cuadrados que llenan el círculo, 'contain' para
+// logos apaisados sobre fondo blanco.
+export const cases = [
+  {
+    id: 'carestino',
+    name: 'Carestino',
+    handle: '@carestinosanrafael',
+    category: 'Artículos para bebés',
+    logo: '/casos/carestino-logo.webp',
+    logoFit: 'contain',
+    antes: '/casos/carestino-antes.webp',
+    despues: '/casos/carestino-despues.webp',
+    description: '',
+    metrics: [
+      { label: 'Seguidores', value: '650 → 732' },
+      { label: 'Crecimiento', value: '+12,6%' },
+      { label: 'Publicaciones', value: '155 → 164' },
+    ],
+  },
+  {
+    id: 'doncarmelopremium',
+    name: 'Don Carmelo Premium',
+    handle: '@hogardoncarmelopremium',
+    category: 'Muebles y hogar',
+    logo: '/casos/doncarmelopremium-logo.webp',
+    logoFit: 'cover',
+    antes: '/casos/doncarmelopremium-antes.webp',
+    despues: '/casos/doncarmelopremium-despues.webp',
+    description: '',
+    metrics: [
+      { label: 'Visualizaciones (30 días)', value: '11,6 mil' },
+      { label: 'Seguidores', value: '1.666 → 1.671' },
+      { label: 'Publicaciones', value: '234 → 240' },
+    ],
+  },
+  {
+    id: 'doncarmelo',
+    name: 'Don Carmelo',
+    handle: '@muebleriahogardoncarmelo',
+    category: 'Artículos para el hogar',
+    logo: '/casos/doncarmelo-logo.webp',
+    logoFit: 'cover',
+    antes: '/casos/doncarmelo-antes.webp',
+    despues: '/casos/doncarmelo-despues.webp',
+    description: '',
+    metrics: [
+      { label: 'Seguidores', value: '9.692 → 9.701' },
+      { label: 'Publicaciones', value: '809 → 813' },
+    ],
+  },
+  {
+    id: 'milugar',
+    name: 'Mi Lugar Sin Gluten',
+    handle: '@milugar.singluten.sr',
+    category: 'Pastelería sin gluten',
+    logo: '/casos/milugar-logo.webp',
+    logoFit: 'contain',
+    antes: '/casos/milugar-antes.webp',
+    despues: null,
+    description: '',
+    metrics: [{ label: 'Seguidores', value: '1.356' }],
+  },
+  {
+    id: 'tierradeninos',
+    name: 'Tierra de Niños',
+    handle: '@tierradeninos.sr',
+    category: 'Ropa infantil',
+    logo: '/casos/tierradeninos-logo.webp',
+    logoFit: 'cover',
+    antes: '/casos/tierradeninos-antes.webp',
+    despues: null,
+    description: '',
+    metrics: [{ label: 'Seguidores', value: '382' }],
+  },
+  {
+    id: 'idmas',
+    name: 'ID+ Ingeniería y Desarrollo',
+    handle: '',
+    category: 'Ingeniería',
+    logo: '/casos/idmas-logo.webp',
+    logoFit: 'contain',
+    antes: null,
+    despues: null,
+    description: '',
+    metrics: [],
+  },
+]
 
 export const steps = [
   { n: 'PASO 1', title: 'Diagnóstico', desc: 'Reviso la cuenta y el contexto de la marca para entender dónde está parada.' },
@@ -44,38 +123,54 @@ export const steps = [
 
 export const plans = [
   {
-    name: 'Esencial',
+    name: 'Pack Básico',
     badge: '',
-    tagline: 'Presencia constante en redes, gestión básica.',
+    price: '$80.000',
+    tagline: 'Presencia constante en una red, para arrancar.',
     variant: 'dark',
-    features: ['Gestión de 1 red social', 'Calendario de contenido mensual', 'Diseño de piezas gráficas', 'Reporte mensual'],
+    features: [
+      'Calendario de contenido mensual',
+      'Gestión de 1 red social (Instagram o Facebook)',
+      '4 publicaciones al mes (1 por semana)',
+      '3 historias semanales',
+      '1 sesión mensual de contenido',
+    ],
   },
   {
-    name: 'Crecimiento',
+    name: 'Pack Pro',
     badge: 'Más elegido',
-    tagline: 'La opción más elegida para marcas en expansión.',
+    price: '$120.000',
+    tagline: 'El doble de contenido, para marcas en crecimiento.',
     variant: 'lavender',
     features: [
-      'Gestión de hasta 3 redes sociales',
-      'Estrategia y calendario editorial',
-      'Diseño y producción de contenido',
-      'Fotografía / video mensual',
-      'Reporte de métricas mensual',
+      'Calendario de contenido mensual',
+      'Gestión de 1 red social (Instagram, Facebook o TikTok)',
+      '8 publicaciones al mes (2 por semana)',
+      '4 historias semanales',
+      '2 sesiones mensuales de contenido',
     ],
   },
   {
-    name: 'Integral',
+    name: 'Pack Premium',
     badge: '',
-    tagline: 'Gestión completa para marcas con mayor volumen.',
+    price: '$150.000',
+    tagline: 'Presencia diaria en dos redes.',
     variant: 'dark',
     features: [
-      'Gestión multiplataforma',
-      'Estrategia de contenido a medida',
-      'Producción fotográfica y video',
-      'Comunidad y respuesta a mensajes',
-      'Reportes y reuniones periódicas',
+      'Calendario de contenido mensual',
+      'Gestión de 2 redes sociales (Instagram, Facebook o TikTok)',
+      '12 publicaciones al mes (3 por semana)',
+      'Historias todos los días (lunes a sábado)',
+      'Mínimo 2 sesiones mensuales de grabación',
     ],
   },
+]
+
+export const planNotes = [
+  'Todos los paquetes incluyen auditoría de marca y optimización del perfil.',
+  'Hasta 2 cambios por contenido.',
+  'Para comenzar se requiere una seña del 50% del total.',
+  'El pago se realiza del 1 al 10 de cada mes.',
 ]
 
 export const about = {
@@ -108,12 +203,12 @@ export const faqs = [
   { q: '¿Qué incluye la gestión de redes sociales?', a: 'Incluye estrategia, calendario de contenidos, diseño de piezas, publicación y reportes de resultados. El alcance exacto se define según el plan elegido.' },
   { q: '¿Cuánto tardan en verse resultados?', a: 'Depende del punto de partida de cada cuenta y del objetivo. Lo conversamos en la primera llamada para armar expectativas realistas.' },
   { q: '¿Trabajás con qué plataformas?', a: 'Instagram, TikTok, LinkedIn y Facebook son las más frecuentes. Si tu marca necesita otra plataforma, lo evaluamos juntas.' },
-  { q: '¿Cómo es la forma de pago?', a: 'Se coordina según el plan y la duración del contrato. Lo definimos antes de arrancar, sin sorpresas.' },
+  { q: '¿Cómo es la forma de pago?', a: 'Los paquetes son mensuales. Para comenzar se pide una seña del 50% y después el pago se hace del 1 al 10 de cada mes.' },
   { q: '¿Puedo cambiar de plan más adelante?', a: 'Sí. Los planes se ajustan a medida que la cuenta crece o cambian los objetivos de la marca.' },
 ]
 
 export const contact = {
-  whatsapp: 'https://wa.me/5490000000000',
-  linkedin: 'https://linkedin.com',
-  email: 'hola@agostinabellido.com',
+  whatsapp: 'https://wa.me/5492604561261',
+  linkedin: 'https://www.linkedin.com/in/agostina-bellido-0978ba181/',
+  email: 'agostinabellido6@gmail.com',
 }

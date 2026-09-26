@@ -1,6 +1,6 @@
 import ScrollReveal from '../ui/ScrollReveal'
 import MagneticButton from '../ui/MagneticButton'
-import { plans } from '../../data/content'
+import { plans, planNotes } from '../../data/content'
 
 const variantStyles = {
   dark: {
@@ -26,10 +26,9 @@ export default function PricingSection() {
     <section id="precios" className="bg-paper py-24 md:py-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-12">
         <ScrollReveal className="mb-12 md:mb-14">
-          <h2 className="font-display font-normal text-[40px] text-cream mb-3.5">Planes</h2>
+          <h2 className="font-display font-normal text-[40px] text-cream mb-3.5">Paquetes</h2>
           <p className="max-w-[520px] text-muted-dark text-[15px] leading-[1.6]">
-            Defino los valores según objetivos y volumen de contenido. Estas son las tres formas de trabajo que
-            más uso.
+            Paquetes mensuales de gestión de redes sociales. Elegí el que mejor se adapte al momento de tu marca.
           </p>
         </ScrollReveal>
 
@@ -46,6 +45,10 @@ export default function PricingSection() {
                   )}
                   <div className={`font-display text-2xl mb-2.5 ${v.title}`}>{plan.name}</div>
                   <div className={`text-sm mb-6 leading-[1.5] ${v.tagline}`}>{plan.tagline}</div>
+                  <div className="mb-7 flex items-baseline gap-1.5">
+                    <span className={`font-display text-4xl leading-none ${v.title}`}>{plan.price}</span>
+                    <span className={`text-sm ${v.tagline}`}>/ mensual</span>
+                  </div>
                   <div className="flex flex-col gap-3 mb-7 flex-1">
                     {plan.features.map((f) => (
                       <div key={f} className={`text-sm flex gap-2.5 leading-[1.5] ${v.feature}`}>
@@ -58,13 +61,24 @@ export default function PricingSection() {
                     href="#contacto"
                     className={`text-center py-[13px] rounded-[2px] text-sm font-semibold ${v.cta}`}
                   >
-                    Consultar valor
+                    Quiero este pack
                   </MagneticButton>
                 </div>
               </ScrollReveal>
             )
           })}
         </div>
+
+        <ScrollReveal className="mt-10">
+          <ul className="flex flex-col gap-2 text-sm text-muted-dark leading-[1.5]">
+            {planNotes.map((n) => (
+              <li key={n} className="flex gap-2.5">
+                <span className="text-lavender-deep">—</span>
+                {n}
+              </li>
+            ))}
+          </ul>
+        </ScrollReveal>
       </div>
     </section>
   )
