@@ -18,20 +18,23 @@ const socials = [
 
 export default function CTASection() {
   return (
-    <section id="contacto" className="bg-paper px-6 md:px-12 pt-24 md:pt-28 pb-28 md:pb-32">
-      <div className="max-w-[1240px] mx-auto text-center">
+    <section id="contacto" className="grain relative isolate overflow-hidden bg-noche text-white px-6 md:px-12 pt-24 md:pt-32 pb-28 md:pb-32">
+      <div className="pointer-events-none absolute -bottom-40 left-1/2 -translate-x-1/2 h-[480px] w-[760px] rounded-full bg-lavender/20 blur-[120px]" />
+
+      <div className="relative z-[2] max-w-[1240px] mx-auto text-center">
         <ScrollReveal>
-          <h2 className="font-display font-normal text-[clamp(36px,5vw,54px)] mb-6 max-w-[720px] mx-auto text-cream">
-            Hablemos de tu próxima estrategia de contenido.
+          <div className="eyebrow !text-lavender mb-5">Contacto</div>
+          <h2 className="display text-[clamp(64px,17vw,180px)] mb-6">
+            Hablemos<span className="text-lavender">.</span>
           </h2>
-          <p className="text-base text-muted-dark max-w-[480px] mx-auto mb-14">
+          <p className="text-base md:text-lg text-white/70 max-w-[460px] mx-auto mb-10 md:mb-12">
             Contame de tu marca y en 24hs te respondo con los próximos pasos.
           </p>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1} className="flex justify-center">
-          <div className="rounded-3xl bg-paper-soft/80 border border-ink/10 backdrop-blur-xl shadow-[0_0_60px_rgba(169,133,177,0.25)] px-10 py-12 md:px-16">
-            <div className="flex flex-wrap justify-center gap-10 md:gap-14">
+        <ScrollReveal delay={0.08} className="flex justify-center">
+          <div className="w-full sm:w-auto rounded-3xl bg-white/[0.04] border border-white/10 backdrop-blur-xl shadow-[0_0_60px_rgba(169,133,177,0.25)] px-6 py-10 sm:px-12 md:px-16 md:py-12">
+            <div className="flex justify-around sm:justify-center gap-6 sm:gap-10 md:gap-14">
               {socials.map(({ key, label, href, external, Icon }) => (
                 <a
                   key={key}
@@ -41,12 +44,12 @@ export default function CTASection() {
                   data-cursor="hover"
                   className="group flex flex-col items-center"
                 >
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center bg-ink/5 border border-ink/10 shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:bg-lavender group-hover:shadow-[0_0_25px_rgba(169,133,177,0.6)]">
+                  <div className="w-[72px] h-[72px] md:w-20 md:h-20 rounded-full flex items-center justify-center bg-white/5 border border-white/15 shadow-lg transition-all duration-estado group-hover:-translate-y-2 group-hover:bg-lavender group-hover:border-lavender group-hover:shadow-[0_0_25px_rgba(169,133,177,0.6)]">
                     <span className="group-hover:animate-shake">
-                      <Icon size={30} strokeWidth={1.75} className="text-cream transition-colors duration-300 group-hover:text-ink" />
+                      <Icon size={30} strokeWidth={1.75} className="text-white transition-colors duration-estado group-hover:text-ink" />
                     </span>
                   </div>
-                  <span className="mt-3 text-sm font-medium text-cream/70 group-hover:text-cream group-hover:translate-y-0.5 transition-all duration-300">
+                  <span className="mt-3 text-sm font-medium text-white/70 group-hover:text-white group-hover:translate-y-0.5 transition-all duration-estado">
                     {label}
                   </span>
                 </a>

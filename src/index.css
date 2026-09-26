@@ -27,6 +27,31 @@
   ::-webkit-scrollbar-thumb { @apply bg-lavender rounded-full; }
 }
 
+@layer components {
+  /* Títulos: condensados, en mayúsculas, grandes y con el interlineado
+     apretado. Son el contraste principal contra el texto chico. */
+  .display {
+    @apply font-display font-extrabold uppercase;
+    font-stretch: 75%;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
+  }
+
+  .section-title {
+    @apply display text-cream text-[clamp(44px,9vw,84px)];
+  }
+
+  /* Etiquetas y datos (años, pasos, cifras): tipografía mono. */
+  .eyebrow {
+    @apply font-mono text-[11px] md:text-xs uppercase tracking-[0.18em] text-lavender-deep;
+  }
+
+  /* Mismo retoque para todas las fotos, así se ven como una serie. */
+  .foto {
+    filter: saturate(0.85) contrast(1.06);
+  }
+}
+
 @layer utilities {
   .text-balance { text-wrap: balance; }
 
@@ -41,6 +66,17 @@
     pointer-events: none;
     z-index: 1;
   }
+
+  /* Carruseles horizontales del celular: sin barra y con los bordes
+     que se desvanecen. */
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .fade-x {
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+  .mask-none { mask-image: none; }
+
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
 }
 
 details > summary {

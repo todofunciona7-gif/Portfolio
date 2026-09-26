@@ -8,6 +8,12 @@ export default {
         paper: '#FEEB9C',
         'paper-2': '#FBDD82',
         'paper-soft': '#FFF9E6',
+        // Fondo oscuro de la portada y el cierre: ciruela saturado.
+        // El footer va un punto más oscuro.
+        noche: {
+          DEFAULT: '#521550',
+          2: '#3F0F3D',
+        },
         ink: '#3A1024',
         cream: '#4A1530',
         'cream-alt': '#6B2C48',
@@ -24,8 +30,21 @@ export default {
         border: '#F0DFA8',
       },
       fontFamily: {
-        display: ['"Libre Caslon Text"', 'serif'],
-        body: ['Sora', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'sans-serif'],
+        body: ['"DM Sans"', 'sans-serif'],
+        mono: ['"DM Mono"', 'monospace'],
+      },
+      // Sistema de movimiento: una sola curva y tres tiempos
+      // (hover, cambio de estado, entrada).
+      transitionTimingFunction: {
+        DEFAULT: 'cubic-bezier(.16, 1, .3, 1)',
+        out: 'cubic-bezier(.16, 1, .3, 1)',
+      },
+      transitionDuration: {
+        DEFAULT: '240ms',
+        hover: '150ms',
+        estado: '240ms',
+        entrada: '500ms',
       },
       animation: {
         marquee: 'marquee 28s linear infinite',
@@ -34,6 +53,7 @@ export default {
         'pulse-slow': 'pulse 4s ease-in-out infinite',
         ripple: 'ripple 1.5s ease infinite',
         shake: 'shake 0.5s ease-in-out',
+        'pulse-ring': 'pulseRing 2s cubic-bezier(.16, 1, .3, 1) infinite',
       },
       keyframes: {
         marquee: {
@@ -43,6 +63,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-16px)' },
+        },
+        pulseRing: {
+          '0%': { opacity: '1', transform: 'scale(.92)' },
+          '100%': { opacity: '0', transform: 'scale(1.18)' },
         },
         ripple: {
           '0%, 60%, 100%': { backgroundColor: 'transparent' },

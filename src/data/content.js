@@ -9,6 +9,12 @@ export const nav = [
   { label: 'Preguntas', href: '#faq' },
 ]
 
+export const hero = {
+  eyebrow: 'Community Manager · San Rafael, Mendoza',
+  lede: 'Estrategia, contenido y gestión de redes sociales para marcas que quieren crecer en serio.',
+  sticker: { big: '4', small: 'años en redes' },
+}
+
 export const stats = [
   { num: 8, label: 'clientes gestionados' },
   { num: 3000, label: 'seguidores nuevos generados', prefix: '+' },

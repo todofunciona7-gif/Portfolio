@@ -6,8 +6,10 @@ import CursorGlow from './components/ui/CursorGlow'
 import ScrollProgressBar from './components/ui/ScrollProgressBar'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import MobileTabBar from './components/layout/MobileTabBar'
+import Ticker from './components/ui/Ticker'
+import HeroSection from './components/sections/HeroSection'
 import StorySection from './components/sections/StorySection'
-import StatsSection from './components/sections/StatsSection'
 import ServicesGrid from './components/sections/ServicesGrid'
 import CaseStudies from './components/sections/CaseStudies'
 import TestimonialsSection from './components/sections/TestimonialsSection'
@@ -59,8 +61,9 @@ export default function App() {
         <Navbar />
 
         <main>
+          <HeroSection ready={!loading} />
+          <Ticker />
           <StorySection />
-          <StatsSection />
           <ServicesGrid />
           <CaseStudies />
           <TestimonialsSection />
@@ -72,6 +75,7 @@ export default function App() {
         </main>
 
         <Footer />
+        <MobileTabBar />
       </motion.div>
     </MotionConfig>
   )
